@@ -5,7 +5,7 @@ module.exports = app => {
     app.get('/suppliers', (req,res) =>{
         app.db.query("SELECT * FROM Suppliers", (err,result)=>{
             if(err){
-                console.error("Error ao buscar fornecedor",err)
+                console.error("Error ao buscar fornecedores",err)
                 return res.status(500).json({mensagem: "Erro no servidor!"})
             }
             res.json(result)
