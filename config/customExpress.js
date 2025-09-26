@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mysql = require('mysql2') 
 
 
+
 //exportando a configuração do servidor para o server.js
 module.exports = () => {
 
