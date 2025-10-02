@@ -16,7 +16,7 @@ module.exports = app => {
     app.get("/movimentacoes/:id", (req, res) => {
         const { id } = req.params
 
-        app.db.query("SELECT * FROM Moviments WHERE _id=?", (err, result) => {
+        app.db.query("SELECT * FROM Moviments WHERE _id=?",[id],(err, result) => {
             if (err) {
                 console.error("Erro ao buscar Resultado!", err)
                 return res.status(500).json({ mensagem: "Erro no servidor" })
