@@ -90,7 +90,7 @@ module.exports = app => {
                     console.error("Erro ao deletar usuario")
                     return res.status(500).json({ mensagem: "Erro no servidor" })
                 }
-                if (result.affectedrows === 0) {
+                if (result.affectedRows === 0) {
                     return res.status(404).json({ mensagem: "Usuario não encontrado!" })
                 }
                 res.status(201).json({ mensagem: "Usuario deletado com sucesso!" })
